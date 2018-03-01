@@ -90,8 +90,8 @@ export default {
                     this.gameStarted = true; // Makes the buttons appear
                     document.getElementById("footer").style.position = 'relative';
 
-                    console.log("dealer's starting cards: " + this.dealerHand[0].code + " " + this.dealerHand[1].code);
-                    console.log("Dealer's points at start: " + this.dealerPoints);
+                    // console.log("dealer's starting cards: " + this.dealerHand[0].code + " " + this.dealerHand[1].code);
+                    // console.log("Dealer's points at start: " + this.dealerPoints);
                 });
             });
         })          
@@ -129,16 +129,16 @@ export default {
             return response.json();
         }).then (json => {
             // console.log("Dealer draws");
-            console.log("pre draw dealer points: " + this.dealerPoints);
+            // console.log("pre draw dealer points: " + this.dealerPoints);
 
             // Check Dealer's points
             this.dealerHand.push(json.cards[0]);
             this.dealerPoints = this.calculate(this.dealerHand);
-            console.log("new points: " + this.dealerPoints);
-            console.log("dealer hand: ");
-            for (var i = 0; i < this.dealerHand.length; i++) {
-                console.log(this.dealerHand[i].code);
-            }
+            // console.log("new points: " + this.dealerPoints);
+            // console.log("dealer hand: ");
+            // for (var i = 0; i < this.dealerHand.length; i++) {
+            //     console.log(this.dealerHand[i].code);
+            // }
 
 
             if (this.dealerPoints > this.BLACKJACK) { // Check if the dealer has over 21 after hitting
@@ -161,7 +161,7 @@ export default {
         })
       },
       stand: function() {
-        console.log("USER STANDS");
+        // console.log("USER STANDS");
 
         if (!this.gameEnd) {
             // Since dealer always goes last, the dealer must still hit if below 17.
