@@ -8,6 +8,8 @@
 
 <script>
 import AppHeader from './components/AppHeader.vue'
+
+document.title = "blackjack"; // Change the title of the page here
 export default {
   name: 'App',
   // components: { AppHeader }

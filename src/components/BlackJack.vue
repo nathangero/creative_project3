@@ -24,7 +24,6 @@
 </template>
 
 <script>
-document.title = "blackjack"; // Change the title of the page here
 
 export default {
   data() {
