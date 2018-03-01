@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
-    <app-header></app-header>    
+    <!-- <app-header></app-header>  -->
+    <title>BlackJack</title>
+    <router-view/>   
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 import AppHeader from './components/AppHeader.vue'
 export default {
   name: 'App',
-  components: { AppHeader }
+  // components: { AppHeader }
 
 }
 </script>
